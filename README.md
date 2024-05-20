@@ -16,4 +16,4 @@
 
 3- Cole a url que você deseja encurtar e cole a url gerada como resposta no navegador
 
-4 - Vá ao banco de dados e dado (accesscount) você vai encontrar a quantidade de acessos.
+4 - Vá ao banco de dados e na propriedade (accesscount) você vai encontrar a quantidade de acessos da url encurtada.
