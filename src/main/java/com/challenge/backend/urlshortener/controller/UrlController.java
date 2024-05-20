@@ -28,9 +28,10 @@ public class UrlController {
 
         }while (urlRepository.existsById(id));
 
-        urlRepository.save(new UrlEntity(id, request.url()));
-
         var redirectUrl = servletRequest.getRequestURL().toString().replace("shorten-url", id);
+
+        urlRepository.save(new UrlEntity(id, request.url(), redirectUrl));
+
         return ResponseEntity.ok(new ShortenUrlResponse(redirectUrl));
     }
     @GetMapping("{id}")
@@ -40,6 +41,14 @@ public class UrlController {
         if(url.isEmpty()){
             return ResponseEntity.notFound().build();
         }
+
+        UrlEntity urlID = url.get();
+
+        // Incrementa o contador de acesso
+        urlID.setAccessCount(urlID.getAccessCount() + 1);
+
+        // Salva a entidade atualizada no banco de dados
+        urlRepository.save(urlID);
 
         HttpHeaders headers = new HttpHeaders();
         headers.setLocation(URI.create(url.get().getFullUrl()));
