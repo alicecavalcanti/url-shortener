@@ -4,16 +4,21 @@
 
 1- Clone o repositório: git clone.
 
-2- No repositório que foi clonado, abra no editor de código Intellij.
+2- Abra em uma IDE de código. Sugestão: Intellij.
 
 3- Baixe o MongoDB Community Server para ter acesso ao banco de dados.
+    O link para download: https://www.mongodb.com/try/download/community
+
+4- Baixe uma ferramenta para testes de requisições HTTP. Sugestão: Httpie
 
 ## Acesso a url encurtada
 
-1-  Faça um "run" da classe principal da aplicação chamada "UrlshortenerApplication".
+1-  Faça um "run" da classe principal("UrlshortenerApplication") da aplicação chamada.
 
-2- Vá a classe "UrlController" e pegue o endpoint e coloque no postman(lembre que é um metódo post)
+2- Tenha acesso ao banco de dados, abrindo MongoDB Community Server e entrando no banco de dados atráves
+do user padrão : username=admin | password=123 . Você pode encontrar mais dessas configurações no arquivo application.properties.
 
-3- Cole a url que você deseja encurtar e cole a url gerada como resposta no navegador
+3- Abra o httpie (ou a ferramenta que você escolheu) e cole o endpoint da controller (ShorteningUrlController), você terá que colar a url 
+que você deseja encurtar e pegue o link encurtado gerado como resposta para usar.
 
-4 - Vá ao banco de dados e na propriedade (accesscount) você vai encontrar a quantidade de acessos da url encurtada.
+2- Quando você abrir o  MongoDB Community Server, terá acesso a média de acesso dessa url por dia, total de acesso a url e também quantos acessos por dia essa url tem.
