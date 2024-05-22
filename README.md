@@ -25,4 +25,4 @@ do user padrão : username=admin | password=123 . Você pode encontrar mais dess
 3- Abra o httpie (ou a ferramenta que você escolheu) e cole o endpoint da controller (ShorteningUrlController), você terá que colar a url 
 que você deseja encurtar e pegue o link encurtado gerado como resposta para usar.
 
-2- Quando você abrir o  MongoDB Community Server, terá acesso a média de acesso dessa url por dia, total de acesso a url e também quantos acessos por dia essa url tem.
+4- Quando você abrir o  MongoDB Community Server, terá acesso a média de acesso dessa url por dia, total de acesso a url e também quantos acessos por dia essa url tem.
